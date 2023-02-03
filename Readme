@@ -1,0 +1,8 @@
+In this notebook,we will be using 3929 MRI brain scans and develop a model using Resnet,a Convolutional Neural network , a CNN model tod detect and localize brain tumors.
+For this to work, we first perfrom image segmentation in which we try to extract information from images.We train the neural network to produce pixel wise mask of the image.
+The 'mask' is the output produced by image segmentation at pixel level
+Then we apply CNN models to extract high level general features and perform classification
+To deal with the Vanishing gradient problem, we use ResNet ,which has a skip connection features enabling us to train many layers
+ImageNet, which has 11 million images and 11000 categories is used to train ResNet network
+For the ResUNet , we use a custom loss function known as focal_tversky from https://github.com/nabsabraham/focal-tversky-unet/blob/master/losses.py
+We have achieved 97% accuracy after this process
